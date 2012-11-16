@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_skins tool -->
+
+<!-- Change the value of these parameters to modify portal_skins behavior:
+ - allow_any: change it to True if you want users to be able to select the
+   skin to use from their personal preferences management page. In the ZMI,
+   this value is known as 'Skin flexibility'.
+ - cookie_persistence: change it to True if you want to make the skin cookie
+   persist indefinitely. In the ZMI, this value is known as 'Skin Cookie
+   persistence'. -->
+<object name="portal_skins" meta_type="Plone Skins Tool" allow_any="False"
+   cookie_persistence="False" default_skin="archimaera"
+   request_varname="plone_skin">
+
+ <!-- This list registers the folders that are stored in the skins directory
+   of your product (on the filesystem) as Filesystem Directory Views within the
+   portal_skins tool, so that they become usable as skin layers. -->
+ <object name="archimaeratheme_images" meta_type="Filesystem Directory View"
+    directory="ArchimaeraTheme/skins/archimaeratheme_images"/>
+ <object name="archimaeratheme_styles" meta_type="Filesystem Directory View"
+    directory="ArchimaeraTheme/skins/archimaeratheme_styles"/>
+ <object name="archimaeratheme_templates" meta_type="Filesystem Directory View"
+    directory="ArchimaeraTheme/skins/archimaeratheme_templates"/>
+
+ <!-- A skin-path in this file corresponds to a Skin Selection in the
+   'Properties' tab of the portal_skins tool, in the ZMI.
+   You can define for each new skin path the layers that it holds.
+   Note: you have to define all the layers of your new skin selection.
+   With this very only version of ArchimaeraTheme (2.5), it is not possible to
+   define a new skin that would be based on another existing one, 'Plone
+   Default' for instance. This is due to some limitations in the way the
+   CMF (its version which is shipped with Plone 2.5) handles profiles for the
+   skins tool. Such feature has been added in CMF 2.1, thus only available
+   from Plone 3.0 on. It's introduced in ArchimaeraTheme 3.0. -->
+ <skin-path name="archimaera">
+
+  <!-- The definition of a layer accepts these parameters:
+    - name: quite self explanatory, the name of the layer.
+    - insert-before: name of the layer before which it must be added.
+    - insert-after: name of the layer after which it must be added.
+    Note: insert-before (and -after) accepts the value "*" which means "all".
+  -->
+  <layer name="custom"/>
+  <layer name="archimaeratheme_styles"/>
+  <layer name="archimaeratheme_images"/>
+  <layer name="archimaeratheme_templates"/>
+  <layer name="kupu_tests"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="PasswordReset"/>
+  <layer name="kupu_plone"/>
+  <layer name="kupu"/>
+  <layer name="ATContentTypes"/>
+  <layer name="ATReferenceBrowserWidget"/>
+  <layer name="archetypes"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="ResourceRegistries"/>
+  <layer name="gruf"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_portlets"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+ </skin-path>
+</object>

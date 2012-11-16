@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- This file shows an example on how to add to the Plone portal new views
+  that can be chosen from the 'Display' object menu.
+  It also shows how to override Left and Right slots in two different ways.
+-->
+
+<!-- UNCOMMENT the needed parts of the profile to make them usable in your
+     product.   -->
+
+<site>
+ <!-- templates that can be chosen from the 'Display' content menu are
+   defined in the "selectable_views" property.
+   Note: use 'purge="False"' if you just want to add one or more views to the
+   original list. If you don't you'll have to define the list of all elements
+   explicitly.
+   Note: there is no support for insert-before/insert-after as for skin-path
+   layers in skins.xml.
+ <property name="selectable_views" purge="False">
+  <element value="folder_listing"/>
+  <element value="news_listing"/>
+ </property>
+ -->
+
+ <!-- As for all list properties, use 'purge="False"' if you just want to add
+   one or more elements to the original list. If you don't you'll have to define
+   the list of all elements explicitly.
+ <property name="left_slots">
+  <element value="here/portlet_navigation/macros/portlet"/>
+  <element value="here/portlet_login/macros/portlet"/>
+  <element value="here/portlet_myleftportlet/macros/portlet"/>
+  <element value="here/portlet_recent/macros/portlet"/>
+  <element value="here/portlet_related/macros/portlet"/>
+ </property>
+ <property name="right_slots" purge="False">
+  <element value="here/portlet_myrightportlet/macros/portlet"/>
+ </property>
+ -->
+</site>

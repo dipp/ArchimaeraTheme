@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- This file shows an example on how to add to the Folder content type a new
+  view that can be choosen from the 'Display' object menu.
+  It also shows how to override FTI default values (Informations about Type
+  Factories stored in the portal_types tool). -->
+
+<!-- UNCOMMENT the needed parts of the profile to make them usable in your
+     product.   -->
+
+<object name="Folder">
+ <!-- properties are optional, use them only if you want specific values to be
+   used instead of the Plone default ones.
+ <property name="immediate_view">folder_listing</property>
+ <property name="default_view">folder_listing</property>
+ <property name="default_view_fallback">False</property>
+ -->
+
+ <!-- templates that can be chosen from the 'Display' content menu are
+   defined in the "view_methods" property.
+   Note: use 'purge="False"' if you just want to add one or more views to the
+   original list. If you don't you'll have to define the list of all elements
+   explicitly.
+   Note: there is no support for insert-before/insert-after as for skin-path
+   layers in skins.xml.
+ <property name="view_methods" purge="False">
+  <element value="my_chosable_view"/>
+ </property>
+ -->
+
+ <!-- See an exported profile for a better idea about all the possible nodes
+   that can be used in the files contained in the 'types' folder of a
+   GenericSetup profile. -->
+
+</object>

@@ -1,0 +1,8 @@
+Changelog for ArchimaeraTheme
+
+    (name of developer listed in brackets)
+
+ArchimaeraTheme 1.0 - Unreleased
+
+    - Generated skeleton product from DIYPloneStyle 2.5.
+      [generator]

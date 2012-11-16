@@ -15,12 +15,8 @@
  <!-- This list registers the folders that are stored in the skins directory
    of your product (on the filesystem) as Filesystem Directory Views within the
    portal_skins tool, so that they become usable as skin layers. -->
- <object name="archimaeratheme_images" meta_type="Filesystem Directory View"
-    directory="ArchimaeraTheme/skins/archimaeratheme_images"/>
- <object name="archimaeratheme_styles" meta_type="Filesystem Directory View"
-    directory="ArchimaeraTheme/skins/archimaeratheme_styles"/>
- <object name="archimaeratheme_templates" meta_type="Filesystem Directory View"
-    directory="ArchimaeraTheme/skins/archimaeratheme_templates"/>
+ <object name="archimaera" meta_type="Filesystem Directory View"
+    directory="ArchimaeraTheme/skins/archimaera"/>
 
  <!-- A skin-path in this file corresponds to a Skin Selection in the
    'Properties' tab of the portal_skins tool, in the ZMI.
@@ -41,9 +37,22 @@
     Note: insert-before (and -after) accepts the value "*" which means "all".
   -->
   <layer name="custom"/>
-  <layer name="archimaeratheme_styles"/>
-  <layer name="archimaeratheme_images"/>
-  <layer name="archimaeratheme_templates"/>
+  <layer name="archimaera"/>
+  <layer name="logistics"/>
+  <layer name="dipp_content"/>
+  <layer name="dipp_forms"/>
+  <layer name="dipp_form_scripts" />
+  <layer name="dipp_styles" />
+  <layer name="dipp_portlets" />
+  <layer name="dipp_scripts" />
+  <layer name="dipp_workflow" />
+  <layer name="dipp_images" />
+  <layer name="fedora_content" />
+  <layer name="cache_setup" />
+  <layer name="ATVocabularyManager" />
+  <layer name="LinguaPlone" />
+  <layer name="LanguageTool" />
+  <layer name="LanguageToolFlags" />
   <layer name="kupu_tests"/>
   <layer name="CMFPlacefulWorkflow"/>
   <layer name="PasswordReset"/>
@@ -70,5 +79,5 @@
   <layer name="plone_deprecated"/>
   <layer name="plone_3rdParty"/>
   <layer name="cmf_legacy"/>
- </skin-path>
+   </skin-path>
 </object>

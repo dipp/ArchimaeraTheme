@@ -37,6 +37,7 @@
     Note: insert-before (and -after) accepts the value "*" which means "all".
   -->
   <layer name="custom"/>
+  <layer name="textindexng3"/>
   <layer name="archimaera"/>
   <layer name="logistics"/>
   <layer name="dipp_content"/>

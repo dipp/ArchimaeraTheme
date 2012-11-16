@@ -1,0 +1,30 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<div metal:define-macro="portlet">
+
+<dl class="portlet" id="portlet-dummy">
+  
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href=""
+           class="tile"
+           i18n:translate=""
+           >dummy
+         </a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <tal:block tal:repeat="br python:range(10)">
+            <br />
+        </tal:block>
+    </dd>
+
+</dl>
+
+
+</div>
+</body>
+</html>

@@ -1,18 +1,320 @@
 /*
-  This file is based on the ploneCustom.css.dtml shipped with Plone.
-
-  <dtml-with base_properties> (do not remove this)
-  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+** Table-based column layout for all browsers.
+**
+** There's a table-less column layout alternative in the plone_tableless
+** skin layer, if you prefer layouts without tables.
 */
 
-/* YOUR CSS RULES START HERE */
+/* <dtml-with base_properties> */
+
+/* BEGIN fullscreen */
+body.fullscreen #portal-logo {
+    display: block;
+}
+
+body.fullscreen #portal-column-content{
+    width: 80%;
+    border-right: 0;
+    height: auto;
+}
+
+body.fullscreen #portal-column-one {
+    display: block;
+    width: 20%;
+    height: auto;
+}
+body.fullscreen #visual-portal-wrapper {
+    width: 95%;
+}
+/* END fullscreen */
+
+#portal-header img {
+    vertical-align: top;
+}
+
+#portal-header {
+    margin-bottom: 1em;
+}
+
+#visual-portal-wrapper {
+    width: 76em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#visual-column-wrapper {
+    background-image: url(&dtml-portal_url;/background-title.jpg);
+    margin: 0;
+}
+#portal-column-content {
+    background-color: #fff;
+    float: right;
+    height: 32em;
+    border-right: 1em solid #000;
+    width: 51em;
+    overflow: auto;
+    margin: 0;
+}
+.visualColumnHideTwo #portal-column-content #content,
+#portal-column-content #content {
+    margin: 0;
+    padding: 0 !important;
+    /*height: 100%;*/
+}
+
+#portal-column-one .visualPadding {
+    height: 100%;
+}
+
+#portal-column-one,
+#portal-column-two {
+    float:left;
+    width:12em;
+    height: 32em;
+    overflow: hide;
+}
+
+#portal-column-one dl.portlet,
+#portal-column-two dl.portlet {
+    background-color: transparent;
+    border-bottom: 0;
+    margin: 0;
+}
+
+#portal-column-one {
+    background-image:url(&dtml-portal_url;/bg-black.png)!important;
+    background-image:url(&dtml-portal_url;/bg-black.gif);
+    _filter: Alpha(opacity=80);
+    border-bottom: 0;
+    margin: 0;
+}
+.section-front-page #portal-column-two {
+    background-image: none !important;
+    background-color: transparent;
+}
+
+.section-front-page #portal-column-content,
+.archimaera-plain #portal-column-content {
+    background-image: none !important;
+    background-color: transparent;
+    overflow: hidden;
+}
+.section-front-page .documentContent,
+.archimaera-plain .documentContent {
+    margin: 0em 3em 0 13em;
+}
+
+.section-front-page .content,
+.archimaera-plain .content {
+    padding: 2em 0 5em 0 !important;
+}
+#portal-column-two {
+    background-image: none;
+    background-color: white;
+    border-bottom: 0;
+    margin: 0;
+}
+
+.section-front-page #portal-column-two,
+.archimaera-plain #portal-column-two {
+    background-image:url(&dtml-portal_url;/bg-white.png)!important;
+    background-image:url(&dtml-portal_url;/bg-white.gif);
+    _filter: Alpha(opacity=80);
+    background-color: transparent;
+    border-bottom: 0;
+    margin: 0;
+}
+.section-front-page #portal-column-two,
+.section-front-page .documentFirstHeading {
+    display: none;
+}
+
+#portal-columns {
+    border: 0px solid black;
+    background-repeat: repeat-x;
+}
+.portlet {
+    padding: 0 0 0 1em;
+}
+/* BEGIN  portal-globalnav in a portlet */
+
+#portal-column-one .portlet {
+    border: 0;
+}
+#portal-column-two .visualPadding {
+    padding: 0;
+}
+#portal-column-one .visualPadding {
+    padding: 0;
+}
+
+#portal-globalnav {
+    padding: 0;
+}
+
+#portal-globalnav li{
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+}
+#portal-globalnav li a,
+#portal-globalnav li a:hover {
+    border: 0;
+    font-weight: bold;
+    color: #ddd;
+    padding: 0;
+}
+#portal-globalnav li a:hover {
+    background-color: transparent;
+    border: 0;
+}
+#portal-globalnav li.selected a {
+    color: #ddd;
+    background-color: transparent;
+    border: 0;
+    font-size: 125%;
+    padding-top: .7em;
+    padding-bottom: .7em;
+}
+#portal-globalnav li.selected {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+dd.portletItem a,
+dd.portletItem a:visited {
+    color: #ddd;
+}
+.portletHeader {
+    display: none;
+}
+.portletItem {
+    border: 0;
+    padding: 1em 0 1em 0;
+    color: #ddd;
+}
+.navTreeLocal { 
+    list-style-image: none;
+    list-style-type: none; 
+}
+
+/* END portal-globalnav in a portlet */
 
 
+#portal-personaltools {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
 
-/* YOUR CSS RULES STOP HERE */
+#portlet-navigation-tree a,
+#portlet-navigation-tree a:hover {
+    font-weight: bold;
+    border: 0;
+    background-color: transparent;
+    text-transform: lowercase;
+}
 
+.navTreeCurrentItem {
+    border: 0 !important;
+}
+
+#portlet-articleinfo ul li {
+    list-style: none;
+}
+#portlet-navigation-tree ul,
+#portlet-articleinfo ul {
+    margin-left: 0;
+    text-transform: lowercase;
+}
+#portlet-articleinfo a,
+#portlet-articleinfo a abbr {
+    font-weight: bold;
+    color: #0000ff;
+}
+.section-aktuelles-heft .documentFirstHeading,
+.section-aktuelles-heft #portlet-navigation-tree a {
+    color: #000066;
+}
+
+.section-nachstes-heft .documentFirstHeading,
+.section-nachstes-heft #portlet-navigation-tree a {
+    color: #800000;
+}
+
+.section-archiv .documentFirstHeading,
+.section-archiv #portlet-navigation-tree a {
+    color: #006666;
+}
+
+.section-uber-archimaera .documentFirstHeading,
+.section-uber-archimaera #portlet-navigation-tree a {
+    color: #008000;
+}
+
+.section-mitmachen .documentFirstHeading,
+.section-mitmachen #portlet-navigation-tree a {
+    color: #cc0000;
+}
+
+.section-service .documentFirstHeading,
+.section-service #portlet-navigation-tree a {
+    color: #c85000;
+}
+
+.section-kontakt .documentFirstHeading,
+.section-kontakt #portlet-navigation-tree a {
+    color: #006600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-bottom: 0;
+    font-weight: bold;
+}
+
+.documentFirstHeading {
+    text-transform: lowercase;
+}
+
+/* authoring */
+.contentViews li a {
+    margin-right: 0.1em;
+    padding: 0em 0.5em;
+    background-color: #fff;
+}
+.contentViews {
+    margin-top: 0.5em;
+}
+
+#portlet-search {
+    padding-top: 3em;
+}
+input.searchButton {
+    background: transparent url(&dtml-portal_url;/search_icon.gif) no-repeat scroll 2px 1px;
+    border: 0;
+}
+#searchGadget {
+    background: #dddddd;
+    border: 2px inset #ddd;
+    width: 8em;
+    font-weight: bold;
+    color: #404040
+}
+.LSBox {
+    text-align: left;
+}
+.LSResult {
+    text-align: left;
+}
+
+/*
+#portal-column-one {
+    float: left;
+}
+#portal-column-two {
+    float: left;
+}
+*/
 /* </dtml-with> */
-
-/* Latest version of the documentation on pre-defined properties from Plone 
-   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
 

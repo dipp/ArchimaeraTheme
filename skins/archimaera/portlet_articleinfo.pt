@@ -1,0 +1,56 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<div metal:define-macro="portlet"
+     tal:omit-tag=""
+     tal:define="parent python:here.getParentNode();
+                parent_type parent/portal_type">
+
+<dl class="portlet" id="portlet-articleinfo">
+  
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href=""
+           class="tile"
+           i18n:translate=""
+           >article info
+         </a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem"
+        tal:define="creator parent/Creator">
+        <ul>
+            <tal:block tal:condition="python: parent_type == 'FedoraArticle'">
+                <li>
+                    <tal:name tal:condition="creator"
+                        tal:define="author python:mtool.getMemberInfo(creator)">
+                      <a href="#"
+                         tal:attributes="href string:${portal_url}/archiv/author/${creator};
+                                         title python:author and author['fullname'] or creator"
+                         tal:omit-tag="not:author">
+                        zum Autor
+                      </a>
+                    </tal:name>
+                </li>
+                <li tal:condition="python:here.hasPDF() != False">
+                        <a href="" target="_blank" tal:attributes="href here/hasPDF">
+                            Artikel als <abbr title="Portable Document Format">pdf</abbr> 
+                        </a>
+                </li>
+            </tal:block>
+            <li tal:condition="here/pdf_issue_url">
+                    <a href="" target="_blank" tal:attributes="href string:${portal_url}/${here/pdf_issue_url}">
+                        Ganzes Heft als <abbr title="Portable Document Format">pdf</abbr> 
+                    </a>
+            </li>
+        </ul>
+    </dd>
+
+</dl>
+
+
+</div>
+</body>
+</html>

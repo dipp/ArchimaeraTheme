@@ -1,0 +1,40 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plone">
+<body>
+<div metal:define-macro="portlet">
+
+<dl class="portlet" id="portlet-portaltabs"
+     tal:define="selected_tabs python:here.selectedTabs('index_html', here, portal_tabs);
+                 selected_portal_tab selected_tabs/portal;"
+     tal:condition="portal_tabs">
+  
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href=""
+           class="tile"
+           i18n:translate=""
+           >portal_tabs
+         </a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <ul id="portal-globalnav">
+            <tal:tabs tal:repeat="tab portal_tabs"><li tal:attributes="id string:portaltab-${tab/id};
+                                class python:test(selected_portal_tab==tab['id'], 'selected', 'plain');">
+                <a href="" 
+                   tal:content="tab/name"
+                   tal:attributes="href tab/url;
+                                   title tab/description|nothing">
+                Tab Name
+                </a></li></tal:tabs>
+        </ul>
+    </dd>
+
+</dl>
+
+
+</div>
+</body>
+</html>

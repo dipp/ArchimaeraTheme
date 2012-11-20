@@ -28,7 +28,52 @@
             visible="True">
         <permission>View</permission>
     </action>
+    
+    <action title="Themen bisher"
+            action_id="archiv" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:{portal_url}/archiv"
+            visible="True">
+        <permission>View</permission>
+    </action>
 	
+    <action title="Über uns"
+            action_id="uber-archimaera" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/uber-archimaera"
+            visible="True">
+        <permission>View</permission>
+    </action>
+    
+    <action title="Autoren"
+            action_id="autoren" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/authors"
+            visible="True">
+        <permission>View</permission>
+    </action>
+    
+    <action title="Service"
+            action_id="service" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/service"
+            visible="True">
+        <permission>View</permission>
+    </action>
+
+    <action title="Mitmachen!"
+            action_id="mitmachen" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/mitmachen"
+            visible="True">
+        <permission>View</permission>
+    </action>
+
 	
 
 </action-provider>

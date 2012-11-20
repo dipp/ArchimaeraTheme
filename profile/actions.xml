@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool">
+<action-provider name="portal_actions">
+
+    <action title="Home"
+            action_id="index_html" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${globals_view/navigationRootUrl}"
+            visible="False">
+   		<permission>View</permission>
+	</action>
+	
+    <action title="Aktuelles Heft"
+            action_id="aktuelles-heft" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/currentissue"
+            visible="True">
+        <permission>View</permission>
+    </action>
+    
+    <action title="Geplante Hefte"
+            action_id="naechstes-heft" 
+            category="portal_tabs"
+            condition_expr="" 
+            url_expr="string:${portal_url}/naechstes-heft"
+            visible="True">
+        <permission>View</permission>
+    </action>
+	
+	
+
+</action-provider>
+</object>

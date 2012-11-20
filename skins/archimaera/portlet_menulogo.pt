@@ -4,7 +4,9 @@
 <body>
 <div metal:define-macro="portlet">
 
-<dl class="portlet" id="portlet-menulogo">
+<dl class="portlet" id="portlet-menulogo"
+    tal:define="menu_logo_name here/menu_logo|nothing"
+    tal:condition="menu_logo_name">
   
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
@@ -17,8 +19,7 @@
     </dt>
 
     <dd class="portletItem"
-        tal:define="menu_logo_name here/menu_logo;
-                    menu_logo_url string: $portal_url/$menu_logo_name;
+        tal:define="menu_logo_url string: $portal_url/$menu_logo_name;
                     logo_obj python: here.restrictedTraverse(menu_logo_name)">
         <a href=""
            tal:attributes="href here/subnav">

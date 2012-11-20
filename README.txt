@@ -54,6 +54,13 @@ Selecting a skin
     can do so by pressing the 'shift' key while reloading the page. In IE, use
     the key combination <Ctrl-F5>.
 
+Usage
+
+    Für Ordner, die keine Indexseite besitzen aber deren Inhalt nur in der
+    Navigation verlinkt sein soll (kein folder_listing) kann über "Ansicht" das
+    Template "archimaera plain view" ausgewählt werden, das nur das Bild einer
+    chimaera darstellt.
+
 Written by
 
-    John Doe <john.doe@dev.null>
+    Peter Reimer <reimer@hbz-nrw.de>

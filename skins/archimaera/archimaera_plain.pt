@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/plain_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+    <p style="text-align: center;">
+        <img style="margin-bottom: 5em;" 
+             width="278" 
+             height="300" 
+             alt="archimaera - architektur.kultur.kontext.online" 
+             src="" 
+             tal:attributes="src string:$portal_url/chimaere.gif" />
+    </p>
+    
+    </metal:main-macro>
+    </div>
+
+</body>
+</html>

@@ -21,10 +21,10 @@
     </action>
     
     <action title="Geplante Hefte"
-            action_id="naechstes-heft" 
+            action_id="nachstes-heft" 
             category="portal_tabs"
             condition_expr="" 
-            url_expr="string:${portal_url}/naechstes-heft"
+            url_expr="string:${portal_url}/nachstes-heft"
             visible="True">
         <permission>View</permission>
     </action>
@@ -33,7 +33,7 @@
             action_id="archiv" 
             category="portal_tabs"
             condition_expr="" 
-            url_expr="string:{portal_url}/archiv"
+            url_expr="string:${portal_url}/archiv"
             visible="True">
         <permission>View</permission>
     </action>

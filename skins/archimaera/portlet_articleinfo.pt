@@ -5,7 +5,8 @@
 <div metal:define-macro="portlet"
      tal:omit-tag=""
      tal:define="parent python:here.getParentNode();
-                parent_type parent/portal_type">
+                 parent_type parent/portal_type|nothing"
+     tal:condition="python: parent_type == 'FedoraArticle'">
 
 <dl class="portlet" id="portlet-articleinfo">
   
@@ -22,7 +23,7 @@
     <dd class="portletItem"
         tal:define="creator parent/Creator">
         <ul>
-            <tal:block tal:condition="python: parent_type == 'FedoraArticle'">
+            <tal:block>
                 <li>
                     <tal:name tal:condition="creator"
                         tal:define="author python:mtool.getMemberInfo(creator)">
@@ -40,11 +41,13 @@
                         </a>
                 </li>
             </tal:block>
+            <!--
             <li tal:condition="here/pdf_issue_url">
                     <a href="" target="_blank" tal:attributes="href string:${portal_url}/${here/pdf_issue_url}">
                         Ganzes Heft als <abbr title="Portable Document Format">pdf</abbr> 
                     </a>
             </li>
+            -->
         </ul>
     </dd>
 

@@ -22,10 +22,11 @@
    explicitly.
    Note: there is no support for insert-before/insert-after as for skin-path
    layers in skins.xml.
- <property name="view_methods" purge="False">
-  <element value="my_chosable_view"/>
- </property>
  -->
+ <property name="view_methods" purge="False">
+  <element value="folder_author_view"/>
+  <element value="archimaera_plain"/>
+ </property>
 
  <!-- See an exported profile for a better idea about all the possible nodes
    that can be used in the files contained in the 'types' folder of a

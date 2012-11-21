@@ -46,8 +46,6 @@ body.fullscreen #visual-portal-wrapper {
 #visual-column-wrapper {
     background-image: url(&dtml-portal_url;/background-title.jpg);
     margin: 0;
-    float: left;
-    width: 100%
 }
 #portal-column-content {
     background-color: #fff;

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 ## Script (Python) "subnav"
 ##bind container=container
 ##bind context=context
@@ -8,7 +9,10 @@
 ##title=
 ##
 
-# -*- coding: utf-8 -*-
+# Wird vom Portlet portlet_menulogo aufgerufen, um die URL des
+# Elternordners zu erhalten, wenn dort die Property menu_logo
+# gesetzt ist
+
 request  = container.REQUEST
 RESPONSE = request.RESPONSE
 

@@ -74,7 +74,31 @@
         <permission>View</permission>
     </action>
 
-	
+    <action title="Send this page to somebody" 
+            action_id="sendto"
+            category="site_actions" 
+            condition_expr=""
+            url_expr="string:$object_url/sendto_form" visible="True">
+        <permission>Allow sendto</permission>
+    </action>
+
+    <action title="Print this page"
+            action_id="print"
+            category="site_actions"
+            condition_expr=""
+            url_expr="string:javascript:this.print();"
+            visible="True">
+        <permission>View</permission>
+    </action>
+
+    <action title="Toggle full screen mode"
+           action_id="full_screen"
+           category="site_actions"
+           condition_expr=""
+           url_expr="string:javascript:toggleFullScreenMode();" 
+           visible="True">
+       <permission>View</permission>
+    </action>
 
 </action-provider>
 </object>

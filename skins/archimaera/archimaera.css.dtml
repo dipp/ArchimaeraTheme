@@ -28,6 +28,9 @@ body.fullscreen #visual-portal-wrapper {
 }
 /* END fullscreen */
 
+#portal-header a{
+    text-decoration: none;
+}
 #portal-header img {
     vertical-align: top;
 }

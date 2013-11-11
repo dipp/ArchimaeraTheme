@@ -66,20 +66,11 @@
                  <div metal:use-macro="here/global_siteactions/macros/site_actions">
                    Site-wide actions (Contact, Sitemap, Help, Style Switcher etc)
                  </div>
-             <tal:comment tal:replace="nothing">
-
-                 <div metal:use-macro="here/global_searchbox/macros/quick_search">
-                   The quicksearch box, normally placed at the top right
-                 </div>
-                 <a metal:use-macro="here/global_logo/macros/portal_logo">
-                   The portal logo, linked to the portal root
-                 </a>
-             </tal:comment>
              
-             <a href="" tal:attributes="href portal_url">
+             <a id="portal_logo" href="" tal:attributes="href portal_url">
                 <img src="logo.gif">
              </a>
-             <a href="http://www.dipp.nrw.de">
+             <a id="dipp_logo" href="http://www.dipp.nrw.de">
                 <img src="dipp_logo.gif">
              </a>
 

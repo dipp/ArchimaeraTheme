@@ -28,9 +28,6 @@ body.fullscreen #visual-portal-wrapper {
 }
 /* END fullscreen */
 
-#portal-header a{
-    text-decoration: none;
-}
 #portal-header img {
     vertical-align: top;
 }
@@ -185,10 +182,12 @@ body.fullscreen #visual-portal-wrapper {
     padding-bottom: 1em;
 }
 
+ul.configlets li a,
 dd.portletItem a,
 dd.portletItem a:visited {
     color: #ddd;
 }
+
 .portletHeader {
     display: none;
 }
@@ -197,9 +196,9 @@ dd.portletItem a:visited {
     padding: 1em 0 1em 0;
     color: #ddd;
 }
-.navTreeLocal { 
+.navTreeLocal {
     list-style-image: none;
-    list-style-type: none; 
+    list-style-type: none;
 }
 
 /* END portal-globalnav in a portlet */
@@ -320,4 +319,3 @@ input.searchButton {
 }
 */
 /* </dtml-with> */
-

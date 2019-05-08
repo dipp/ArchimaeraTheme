@@ -1,4 +1,4 @@
 ArchimaeraTheme
 ===============
 
-theme für http://www.archimaera.de
+Plone theme for https://www.archimaera.de, testet with Plone 2.5.5

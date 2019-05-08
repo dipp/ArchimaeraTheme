@@ -66,11 +66,20 @@
                  <div metal:use-macro="here/global_siteactions/macros/site_actions">
                    Site-wide actions (Contact, Sitemap, Help, Style Switcher etc)
                  </div>
-             
-             <a id="portal_logo" href="" tal:attributes="href portal_url">
+             <tal:comment tal:replace="nothing">
+
+                 <div metal:use-macro="here/global_searchbox/macros/quick_search">
+                   The quicksearch box, normally placed at the top right
+                 </div>
+                 <a metal:use-macro="here/global_logo/macros/portal_logo">
+                   The portal logo, linked to the portal root
+                 </a>
+             </tal:comment>
+
+             <a href="" tal:attributes="href portal_url">
                 <img src="logo.gif">
              </a>
-             <a id="dipp_logo" href="http://www.dipp.nrw.de">
+             <a href="http://www.dipp.nrw.de">
                 <img src="dipp_logo.gif">
              </a>
 
@@ -78,7 +87,7 @@
                The skin switcher tabs. Based on which role you have, you
                get a selection of skins that you can switch between.
              </div>
-             
+
              <tal:comment tal:replace="nothing">
                  <div metal:use-macro="here/global_sections/macros/portal_tabs">
                    The global sections tabs. (Welcome, News etc)
@@ -170,7 +179,7 @@
               </div>
             </div>
             <tal:comment replace="nothing"> End of the left column </tal:comment>
-            
+
             <tal:comment replace="nothing"> Start of right column </tal:comment>
               <div id="portal-column-two"
                    metal:define-slot="column_two_slot">
@@ -210,6 +219,42 @@
       </tal:comment>
 
     </div>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.www.archimaera.de","*.archimaera.de"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//porphyrion.hbz-nrw.de/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 15]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//porphyrion.hbz-nrw.de/piwik/piwik.php?idsite=15" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<script type="text/javascript">
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#4c4c4c"
+    },
+    "button": {
+      "background": "#4c4c4c"
+    }
+  },
+  "position": "bottom-right",
+  "content": {
+    "dismiss": "Cookies akzeptieren",
+    "link": "Mehr erfahren.",
+    "message": "Wir verwenden Cookies, um unsere Webseiten benutzerfreundlicher zu gestalten und um Zugriffsstatistiken zu erheben. Durch die Nutzung unserer Webseiten akzeptieren Sie die Speicherung von Cookies.",
+      "href": portal_url + "/datenschutz"
+  }
+})});
+</script>
 
 </body>
 </html>

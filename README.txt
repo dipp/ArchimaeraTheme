@@ -56,10 +56,10 @@ Selecting a skin
 
 Usage
 
-    Für Ordner, die keine Indexseite besitzen aber deren Inhalt nur in der
-    Navigation verlinkt sein soll (kein folder_listing) kann über "Ansicht" das
-    Template "archimaera plain view" ausgewählt werden, das nur das Bild einer
-    chimaera darstellt.
+    Fuer Ordner, die keine Indexseite besitzen aber deren Inhalt nur in der
+    Navigation verlinkt sein soll (kein folder_listing) kann ueber "Ansicht" das
+    Template "archimaera plain view" ausgewaehlt werden, das nur das Bild einer
+    chimaere darstellt.
 
 Written by
 
